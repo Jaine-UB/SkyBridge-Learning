@@ -1,9 +1,11 @@
 # Sky Bridge Learning
 This website is a tool for parent with bilingual child. Can search books in different language and visit the original link.
 
-![Screenshot](.images/homepage_scrshot.jpg)
+![Books_page](https://github.com/user-attachments/assets/86cbe9e9-361e-4a0f-9009-773e8b1b503d)
+
 
 ## Features
+
 ✅ Book search via Google API
 ✅ Simple filters (JS)
 ✅ User friendly UI
