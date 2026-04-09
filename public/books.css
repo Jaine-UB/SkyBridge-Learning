@@ -1,0 +1,156 @@
+/* Base body styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+  color: black;
+  margin: 0;
+  padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+/* Header styling */
+header {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#theme-toggle {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-bottom: 20px;
+}
+
+/* Dark mode button */
+body.dark-mode #theme-toggle {
+  background-color: #333;
+  color: white;
+}
+
+/* Hover effect */
+#theme-toggle:hover {
+  transform: scale(1.05);
+}
+
+input[type="text"], select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode input,
+body.dark-mode select {
+  background-color: #1e1e1e;
+  color: white;
+  border-color: #444;
+}
+
+/* Grid container */
+#results {
+  display: grid;
+  gap: 20px; /* space between cards */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-top: 20px;
+}
+
+/*Book card styling*/
+.book {
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #fafafa;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+body.dark-mode .book {
+  background-color: #1e1e1e;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+.book img {
+  max-width: 120px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.book h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+}
+
+.book p {
+  margin: 2px 0;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.book:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+body.dark-mode .book p {
+  color: #ccc;
+}
+
+button[onclick="searchBooks()"] {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button[onclick="searchBooks()"]:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+body.dark-mode button[onclick="searchBooks()"] {
+  background-color: #0d6efd;
+}
+
+body.dark-mode button[onclick="searchBooks()"]:hover {
+  background-color: #084298;
+}
+
+#searchInput,
+#language,
+#printType,
+#availability,
+button[onclick="searchBooks()"] {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  #searchInput,
+  select,
+  button[onclick="searchBooks()"] {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

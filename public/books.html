@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="books.css">
+    <title>Find your books</title>
+</head>
+<body>
+    <header>Search books</header>
+    <button id="theme-toggle">🌙 Dark Mode</button>
+    <input type="text" id="searchInput" placeholder="Search books..." />
+
+    <select id="language">
+        <option value="">All Languages</option>
+        <option value="en">English</option>
+        <option value="ja">Japanese</option>
+    </select>
+
+    <select id="printType">
+        <option value="">All types</option>
+        <option value="books">Books</option>
+        <option value="magazines">Magazines</option>
+    </select>
+
+    <select id="maturityFilter">
+        <option value="">All ages</option>
+        <option value="NOT_MATURE">Kids</option>
+        <option value="MATURE">Adults</option>
+    </select>
+
+    <button onclick="searchBooks()">Search</button>
+
+    <div id="results"></div>
+
+    <script src="./js/books.js"></script>
+
+    
+</body>
+</html>
