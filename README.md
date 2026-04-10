@@ -1,6 +1,7 @@
 # Sky Bridge Learning
 This website is a tool for parent with bilingual child. Can search books in different language and visit the original link.
 
+## Homepage
 <img width="1878" height="902" alt="homepage" src="https://github.com/user-attachments/assets/4712aa21-67d6-4ae1-889c-16beb48a58a2" />
 
 
