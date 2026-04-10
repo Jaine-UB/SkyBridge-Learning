@@ -50,6 +50,9 @@ Google Books API = your_googlebooks_api_key_here
 ## 7. Start the server
 npm run dev
 
+## 9. Citation
+This project used AI(ChatGPT) for assitance such as debugging, spell checking. 
+
 ## 8. About author
 Jaine Boldbaatar 
 - email : aja20.aja10success@gmail.com
