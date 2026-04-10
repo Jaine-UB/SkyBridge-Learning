@@ -47,54 +47,21 @@ body {
 
 
 /* Main */
-.hero {
+.about-hero {
   text-align: center;
   padding: 50px 15px;
   background: linear-gradient(to right, #0077ff, #00c6ff);
   color: white;
 }
 
-.btn {
-  display: inline-block;
-  padding: 10px 16px;
-  background: white;
-  color: #0077ff;
-  border-radius: 8px;
-  text-decoration: none;
-  margin: 5px;
-}
-
-.btn.secondary {
-  background: transparent;
-  border: 2px solid white;
-  color: white;
-}
-
-/* FEATURES */
-.features {
-  padding: 30px 15px;
+.about-container{
   text-align: center;
+  padding: 50px 15px;
+ background: #f6f7fb;
+  color: #222;
 }
 
-.cards {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 20px;
-}
 
-.card {
-  padding: 15px;
-  border-radius: 10px;
-  background: #ffffff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-#results {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 12px;
-}
 
 /* FOOTER */
 .footer {
@@ -127,12 +94,7 @@ body {
     gap: 20px;
   }
 
-  .cards {
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .hero {
+  .about-hero {
     padding: 80px 20px;
   }
 

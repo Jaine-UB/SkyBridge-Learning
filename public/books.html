@@ -4,37 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="books.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <title>Find your books</title>
 </head>
 <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="SkyBridge Logo">
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="books.html">Search Books</a></li>
+            <li><a href="videos.html">Search Videos</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+        </ul>
+    </nav>
     <header>Search books</header>
-    <button id="theme-toggle">🌙 Dark Mode</button>
-    <input type="text" id="searchInput" placeholder="Search books..." />
 
-    <select id="language">
-        <option value="">All Languages</option>
-        <option value="en">English</option>
-        <option value="ja">Japanese</option>
-    </select>
+    <div class="search-box">
+         <input type="text" id="searchInput" placeholder="Search books..." />
 
-    <select id="printType">
-        <option value="">All types</option>
-        <option value="books">Books</option>
-        <option value="magazines">Magazines</option>
-    </select>
+        <select id="language">
+             <option value="">All Languages</option>
+            <option value="en">English</option>
+            <option value="ja">Japanese</option>
+        </select>
 
-    <select id="maturityFilter">
-        <option value="">All ages</option>
-        <option value="NOT_MATURE">Kids</option>
-        <option value="MATURE">Adults</option>
-    </select>
+         <select id="printType">
+            <option value="">All types</option>
+            <option value="books">Books</option>
+            <option value="magazines">Magazines</option>
+        </select>
 
-    <button onclick="searchBooks()">Search</button>
+            <select id="maturityFilter">
+            <option value="">All ages</option>
+            <option value="NOT_MATURE">Kids</option>
+            <option value="MATURE">Adults</option>
+        </select>
 
+        <button onclick="searchBooks()">Search</button>
+    </div>
     <div id="results"></div>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <p>W Jefferson St, La Grange, KY</p>
+            <p>📞 502-306-4248</p>
+        </div>
+
+        <div class="map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1289.4883189580828!2d-85.38781670310611!3d38.40540684222674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88698e302fe68fc7%3A0xd755f997cd719a43!2sW%20Jefferson%20St%2C%20La%20Grange%2C%20KY%2040031!5e0!3m2!1sen!2sus!4v1775783024071!5m2!1sen!2sus" 
+                width="300" 
+                height="200" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <div>
+            <p>© 2026 SkyBridge Learning</p>
+        </div>
+    </footer>
 
     <script src="./js/books.js"></script>
 
+    
     
 </body>
 </html>

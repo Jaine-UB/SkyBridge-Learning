@@ -1,14 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Dark mode toggle
-  const button = document.getElementById("theme-toggle");
-  button.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-    button.textContent = document.body.classList.contains("dark-mode")
-      ? "☀️ Light Mode"
-      : "🌙 Dark Mode";
-  });
-});
-
 let currentBooks = []; // Cache last results
 
 // Search books
@@ -16,7 +5,8 @@ async function searchBooks() {
   const query = document.getElementById("searchInput").value;
   const language = document.getElementById("language").value;
   const printType = document.getElementById("printType").value;
-  const API_KEY = "AIzaSyCvR3G4fz1GKVzIbA336371HUWOqQTzzoo"; 
+  const maturityFilter = document.getElementById("maturityFilter").value;
+  const API_KEY = "YOUR_API_KEY_HERE"; 
 
   if (!query) {
     alert("Please enter a search term.");
@@ -26,6 +16,7 @@ async function searchBooks() {
   let url = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&key=${API_KEY}`;
   if (language) url += `&langRestrict=${language}`;
   if (printType) url += `&printType=${printType}`;
+  if (maturityFilter) url += `&maturityRating=${maturityFilter}`;
 
   try {
     const res = await fetch(url);
@@ -63,20 +54,27 @@ function displayBooks(books) {
 
   filteredBooks.forEach(book => {
     const info = book.volumeInfo;
+
+    const image = info.imageLinks?.thumbnail
+      ? info.imageLinks.thumbnail
+      : "https://via.placeholder.com/128x180?text=No+Image";
+
     const link = info.infoLink || "#";
 
     const card = document.createElement("a");
-    card.href = link;
-    card.target = "_blank";
-    card.classList.add("book");
+      card.href = link;
+      card.target = "_blank";
+      card.classList.add("book");
+
     card.innerHTML = `
-      <img src="${info.imageLinks?.thumbnail || ''}" alt="Book cover"/>
+      <img src="${image}" alt="Book cover"/>
       <h3>${info.title || "No title"}</h3>
       <p><strong>Author:</strong> ${info.authors?.join(", ") || "Unknown"}</p>
       <p><strong>Language:</strong> ${info.language || "N/A"}</p>
       <p><strong>Published:</strong> ${info.publishedDate || "N/A"}</p>
       <p><strong>Maturity:</strong> ${info.maturityRating === "MATURE" ? "Adults" : "Kids"}</p>
     `;
+
     container.appendChild(card);
   });
 }
