@@ -1,5 +1,6 @@
 # Sky Bridge Learning
-This website is a tool for parent with bilingual child. Can search books in different language and visit the original link.
+
+This website is a tool designed to support parents raising bilingual children. It allows users to search for books in different languages and access original sources for each book to continue learning and exploration.
 
 ## Homepage
 <img width="1878" height="902" alt="homepage" src="https://github.com/user-attachments/assets/4712aa21-67d6-4ae1-889c-16beb48a58a2" />
